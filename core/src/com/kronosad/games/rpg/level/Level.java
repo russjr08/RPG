@@ -35,10 +35,16 @@ public class Level {
         mapRenderer.render();
         batch.begin();
         // TODO: Draw Entities.
+
+        for(Entity e : entities) {
+            e.render(batch);
+        }
     }
 
     public void update() {
-
+        for(Entity e : entities){
+            e.update();
+        }
     }
 
     public void addEntity(Entity entity) {

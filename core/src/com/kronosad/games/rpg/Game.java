@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.kronosad.games.rpg.entity.player.LocalPlayer;
 import com.kronosad.games.rpg.level.Level;
 
 public class Game extends ApplicationAdapter {
@@ -27,6 +28,8 @@ public class Game extends ApplicationAdapter {
         camera.setToOrtho(false, WIDTH, HEIGHT);
 
         currentLevel = new Level("outside", camera);
+
+        currentLevel.addEntity(new LocalPlayer());
 
         instance = this;
 	}

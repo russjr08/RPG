@@ -9,11 +9,11 @@ public class LocalPlayer extends Player {
 
     @Override
     public void render(SpriteBatch batch) {
-
+        super.render(batch);
     }
 
     @Override
     public void update() {
-
+        super.update();
     }
 }
