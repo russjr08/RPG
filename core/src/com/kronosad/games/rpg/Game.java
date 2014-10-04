@@ -29,7 +29,7 @@ public class Game extends ApplicationAdapter {
 
         currentLevel = new Level("outside", camera);
 
-        currentLevel.addEntity(new LocalPlayer());
+        currentLevel.addEntity(new LocalPlayer(currentLevel));
 
         instance = this;
 	}
@@ -50,6 +50,8 @@ public class Game extends ApplicationAdapter {
     public void update() {
         currentLevel.update();
     }
+
+    public OrthographicCamera getCamera() { return camera; }
 
     public static Game getInstance() { return instance; }
 }

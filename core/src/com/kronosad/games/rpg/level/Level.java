@@ -55,4 +55,11 @@ public class Level {
         entities.removeValue(entity, false);
     }
 
+    public OrthogonalTiledMapRenderer getMapRenderer() {
+        return mapRenderer;
+    }
+
+    public TiledMap getMap() {
+        return map;
+    }
 }
